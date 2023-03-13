@@ -1,30 +1,17 @@
-// function createPromise(position, delay) {
-//   const shouldResolve = Math.random() > 0.3;
-//   if (shouldResolve) {
-//     // Fulfill
-//   } else {
-//     // Reject
-//   }
-// }
+function createPromise(position, delay) {
+  const shouldResolve = Math.random() > 0.3;
+  if (shouldResolve) {
+    // Fulfill
+  } else {
+    // Reject
+  }
+}
 
-// const ref = {
-//   formPromises: document.querySelector('.form'),
-//   delayInput: document.querySelector('input[name="delay"]'),
-//   stepInput: document.querySelector('input[name="step"]'),
-//   amountInput: document.querySelector('input[name="amount"]'),
-//   promisesBtn: document.querySelector('button'),
-// };
-// console.log(ref.promisesBtn);
+const form = document.querySelector(".form");
 
-// let position = null;
-// let delay = null;
-// let step = null;
+form.addEventListener("sudmit", onFormSubmit);
 
-const formPromises = document.querySelector(".form");
-
-formPromises.addEventListener("sudmit", onCreatePromises);
-
-function onCreatePromises (event) {
+function onFormSubmit(event) {
   event.preventDefault();
   const {
     elements: { delay, step, amount }
